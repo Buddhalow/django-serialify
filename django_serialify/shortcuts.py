@@ -11,7 +11,7 @@ from . import serialize
 
 def render(request, template, data):
     if 'application/json' in request.META.get('HTTP_ACCEPT'):
-        data = serialize(data, 0, 2)
+        data = serialize(data, 5, 0)
         return JsonResponse(
             data
         )
